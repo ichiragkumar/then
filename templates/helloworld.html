@@ -1,0 +1,88 @@
+<html>
+
+<head>
+		<title>
+		Chirag Roy
+	    </title>
+
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+		rel="stylesheet" 
+		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+		crossorigin="anonymous">
+</head>
+<body style="background-color: black ">
+<h1 style="color: white;
+	text-align: center">
+
+		<span style="color: red">
+			COVID-19 Data
+		</span>
+		WorldWide Data
+</h1>
+<!-- {% for country in list1 %}
+ <p>{{country}}</p>
+{% endfor  %}-->
+
+<form method="post" action="" class="d-flex justify-content-center align-item-center">
+		{% csrf_token %}
+	
+		<select name="selectedcountry" class="form-control" style="width: 300px">
+			
+			{% for country in list1 %}
+
+				<option>
+					{{country}}
+				</option>
+			{% endfor %}
+
+		</select>
+		<input type="submit" name="" class="btn btn-danger">
+</form>
+          <br><br>
+	<hr>
+	<h2 style="margin-top:50; color: white; text-align: center"> {{selectedcountry}}</h2>
+	<hr>
+
+		<br>
+	<div class="d-flex justify-content-center align-item-center">
+
+		<div class="container" style="background-color: yellow; height: 100px; width:  200px">
+			<h2>{{total}}</h2>
+			<p>Total Cases</p>
+		</div>
+
+		<div class="container" style="background-color: green; height: 100px; width:  200px">
+		    <h2>{{recovered}}</h2>
+			<p>People are Recovered</p>
+		</div>
+
+		<div class="container" style="background-color: skyblue; height: 100px; width: 200px">
+			<h2>{{active}}</h2>
+			<p>active Cases</p>	
+
+		</div>	
+	</div>
+	
+	<br> <br>
+
+	<div class="d-flex justify-content-center align-item-center">
+
+		<div class="container" style=" background-color: orange; height: 100px; width:  200px">
+			<h2>{{new}}</h2>
+			<p>New Cases</p>
+		</div>
+
+		<div class="container" style="background-color: grey;  height: 100px; width:  200px">
+			<h2>{{death}}</h2>
+			<p>Died</p>
+		</div>
+
+		<div class="container" style="background-color: red; height: 100px; width:  200px">
+			<h2>{{critical}}</h2>
+			<p>Criticial  Cases</p>
+		</div>
+	</div>
+</body>
+
+</html>
