@@ -37,11 +37,6 @@ pluggy==0.13.1
 proglog==0.1.9
 psycopg2==2.8.6
 py==1.9.0
-pygame==2.0.0
-Pygments==2.7.3
-pyparsing==2.4.7
-PyPDF2==1.26.0
-pytz==2020.4
 pywin32==300
 requests==2.25.0
 scipy==1.5.4
