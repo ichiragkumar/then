@@ -41,10 +41,6 @@ pygame==2.0.0
 Pygments==2.7.3
 pyparsing==2.4.7
 PyPDF2==1.26.0
-pypiwin32==223
-pytest==6.1.2
-python-dateutil==2.8.1
-pyttsx3==2.90
 pytz==2020.4
 pywin32==300
 requests==2.25.0
